@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <! Create an area to put our text in -- >
+        <h1 id="text"></h1>
+    </body>
+
+    <! All our code will go into the script tag -- >
+    <script>
+        // This will create an input box for the user, and we are setting the value of whatever they input to UserInput
+        var UserInput = prompt("Please enter your name")
+
+        // This will get our 'document' (aka the h1 tag) to be able to put our text
+        document.getElementById("text").innerHTML = "Hello " + UserInput + "!";
+        // .innerHTML = ...; will set whatever is inside the tag to what we put it as
+        // This code will say Hello to the user.
+    </script>
+
+</html>

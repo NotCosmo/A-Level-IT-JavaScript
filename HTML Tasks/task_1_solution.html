@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+    <h1>Tawara Company Quiz</h1>
+
+    <h3>Q1: When was Tawara founded?</h3>
+    <button id="Q1_A" onclick="HideButtons(1)">(A) 1952</button>
+    <button id="Q1_B" onclick="answerClick(1)">(B) 1949</button>
+    <button id="Q1_C" onclick="HideButtons(1)">(C) 2016</button>
+    <button id="Q1_D" onclick="HideButtons(1)">(D) 1955</button>
+
+
+    <h3>Q2: What is Tawaras mission?</h3>
+    <button id="Q2_A" onclick="answerClick(2)">(A) Torture students</button>
+    <button id="Q2_B" onclick="HideButtons(2)">(B) Make money</button>
+    <button id="Q2_C" onclick="HideButtons(2)">(C) Gain more power</button>
+    <button id="Q2_D" onclick="HideButtons(2)">(D) All of the above</button>
+
+    <h3>Q3: What software does Tawara use?</h3>
+    <button id="Q3_A" onclick="HideButtons(3)">(A) ChatGPT</button>
+    <button id="Q3_B" onclick="HideButtons(3)">(B) Microsoft Access</button>
+    <button id="Q3_C" onclick="HideButtons(3)">(C) Microsoft Word</button>
+    <button id="Q3_D" onclick="answerClick(3)">(D) Tawara Office</button>
+
+    <! br is a line break or space -- >    
+    <br>
+    <br>
+    <br>
+    <button onclick="displayScore()">Display Score</button>
+    <br>
+    <br>
+    <br>
+    <button onclick="reset()"> Reset Quiz</button>
+
+    <script>
+
+        /* 
+
+        TASK:
+        
+        1. Edit the following code to add a counter that increases by 1 each time the correct answer is clicked.
+        2. You must edit the code again to make sure that the buttons have disappeared once the user has chosen an answer to prevent cheating.
+        3. Add a way for the user to get their score.
+        4. Add a button to reset the quiz.
+
+        ANSWER KEY:
+
+        Q1: B
+        Q2: A
+        Q3: D
+
+        */
+
+        var score = 0;
+
+        function HideButtons(QuestionNumber) {
+
+            if (QuestionNumber == 1) {
+                document.getElementById("Q1_A").style.display = 'none';
+                document.getElementById("Q1_B").style.display = 'none';
+                document.getElementById("Q1_C").style.display = 'none';
+                document.getElementById("Q1_D").style.display = 'none';
+            } else if (QuestionNumber == 2) {
+                document.getElementById("Q2_A").style.display = 'none';
+                document.getElementById("Q2_B").style.display = 'none';
+                document.getElementById("Q2_C").style.display = 'none';
+                document.getElementById("Q2_D").style.display = 'none';
+            } else {
+                document.getElementById("Q3_A").style.display = 'none';
+                document.getElementById("Q3_B").style.display = 'none';
+                document.getElementById("Q3_C").style.display = 'none';
+                document.getElementById("Q3_D").style.display = 'none';
+            }
+        }
+
+        function answerClick(QuestionNumber) {
+
+            HideButtons(QuestionNumber);
+            score++;
+        }
+
+        function displayScore() {
+            alert("Your score is " + score);
+        }
+
+        function reset() {
+            location.reload();
+        }
+
+    </script>
+
+</html>

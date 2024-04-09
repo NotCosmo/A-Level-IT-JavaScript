@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+    <body>
+        <p>Counter:</p>
+        <p id="counter">0</p>
+
+        <! Add buttons with an 'onclick' which will call the function when clicked. -- >
+        <button id="add" onclick="add()">Add</button>
+        <button id="subtract" onclick="subtract()">Subtract</button>
+        <button id="reset" onclick="reset()">Reset</button>
+
+    </body>
+
+    <script>
+
+        function add() {
+            // increment by one
+            document.getElementById("counter").innerHTML++;
+        }
+
+        function subtract() {
+            // decrement by one
+            document.getElementById("counter").innerHTML--;
+        }
+
+        function reset() {
+            // There are two ways to go about this:
+            // - Refresh the page:
+            // location.reload();
+
+            // OR:
+            // This will send a pop-up to the user telling them it has been reset.
+            alert("Counter has been reset!")
+            document.getElementById("counter").innerHTML = 0;
+        }
+
+    </script>
+
+</html>

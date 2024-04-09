@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+    <body>
+        <p id="colours">Colours will appear here!</p>
+
+        <button id="start" onclick="start()">Click me to start</button>
+
+    </body>
+
+    <script>
+
+        /*
+        
+        EXERCISE: Play with the delay and see what it does!
+
+        Add more colours to the array and edit the code accordingly.
+
+        If there are any issues, please contact Cosmo.
+
+        */
+
+        var colours = ['Gray', 'Red', 'Green', 'Yellow', 'Purple', 'Blue', 'Black', 'White']
+        var counter = 0;
+
+        function start() {
+
+            // setInterval will repeat a function/block of code every 'X' miliseconds where X is the delay
+            setInterval(
+                // function to repeat
+                function() {
+                    // set the colour text to whatever colour we are on (remember arrays count from 0)
+                    var text = document.getElementById("colours").innerHTML = colours[counter]
+                    counter++;
+
+
+                    /* 
+                    Our array only has 7 values, therefore if the counter gets past 7
+                    we will get an error, so we will reset it back to 0 once we reach 7.
+                    */
+                    if (counter > 7) {
+                        counter = 0;
+                    }
+                },
+                100 // delay in miliseconds
+            );
+        }
+
+    </script>
+
+</html>
